@@ -6,6 +6,8 @@ Code accompanying the paper:
 > *Minority-Triggered Reorientation Yields Macroscopic Cascades and Enhanced Responsiveness in a Vicsek Swarm.*
 > [Preprint / DOI — to be added upon publication]
 
+[![DOI](https://zenodo.org/badge/1166733249.svg)](https://doi.org/10.5281/zenodo.18773615)
+
 ## Overview
 
 This repository has all the simulation and analysis code for reproducing the figures in the paper. We study a variant of the Vicsek model where particles can align with a dissenting minority neighbor (one whose orientation diverges sufficiently from the local majority) rather than following the crowd. This minority-interaction rule drives the swarm to a self-organized critical state: rare fluctuations trigger system-spanning avalanches in collective order, and the swarm becomes noticeably more sensitive to external orientation signals.
