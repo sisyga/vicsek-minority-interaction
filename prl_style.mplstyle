@@ -1,0 +1,71 @@
+# Figure properties
+figure.figsize: 3.375, 2.6  # Column width in PRL is 3.375 inches
+figure.dpi: 300
+figure.facecolor: white
+figure.autolayout: True
+
+# Font properties - similar to Times New Roman used in PRL
+font.family: sans-serif
+font.serif: Times, Times New Roman, DejaVu Serif
+font.sans-serif: DejaVu Sans, Arial, Helvetica, Liberation Sans
+font.size: 8  # ~2.8mm height, exceeds minimum 2mm requirement
+font.weight: normal
+
+# Axes properties
+axes.titlesize: 9
+axes.labelsize: 8
+axes.labelweight: normal
+# Removed invalid keys axes.titlefont and axes.labelfont
+axes.linewidth: 0.5
+axes.edgecolor: black
+axes.facecolor: white
+axes.grid: False
+axes.formatter.use_mathtext: True
+# Paul Tol's colorblind-friendly palette - highly accessible
+axes.prop_cycle: cycler('color', ['004488', 'DDAA33', 'BB5566', '004488', '22CCCC', '0077BB', 'EE7733', 'CC3311'])
+
+# Tick properties
+xtick.direction: in
+xtick.major.size: 3
+xtick.major.width: 0.5
+xtick.minor.size: 1.5
+xtick.minor.width: 0.5
+xtick.minor.visible: True
+xtick.labelsize: 7
+
+ytick.direction: in
+ytick.major.size: 3
+ytick.major.width: 0.5
+ytick.minor.size: 1.5
+ytick.minor.width: 0.5
+ytick.minor.visible: True
+ytick.labelsize: 7
+
+# Line properties
+lines.linewidth: 1.0  # Exceeds minimum 0.5pt (0.18mm) requirement
+lines.markersize: 3   # ~1.06mm diameter, exceeds minimum 1mm requirement
+lines.markeredgewidth: 0.5
+
+# Legend properties
+legend.fontsize: 7
+legend.frameon: False
+legend.handletextpad: 0.4
+legend.borderpad: 0.2
+legend.columnspacing: 1.0
+legend.handlelength: 1.0
+
+# Saving figures
+savefig.dpi: 600
+savefig.format: pdf
+savefig.bbox: tight
+savefig.pad_inches: 0.05
+
+# Other settings
+# mathtext.fontset: stix
+# figures saved as SVG should contain text as text, not shapes# SVG text settings
+svg.fonttype: none
+
+# REMINDER FOR MANUAL FORMATTING (not controlled by style file)
+# - Label subfigures as (a), (b), etc.
+# - Use parentheses (not brackets) for units in axis labels: e.g., "Distance (mm)"
+# - Use actual Greek symbols, not their names (e.g., θ not \theta)

@@ -1,0 +1,16 @@
+# Core numerical and JIT
+numpy>=1.24
+numba>=0.57
+scipy>=1.10
+
+# Plotting and progress
+matplotlib>=3.7
+tqdm>=4.65
+
+# Analysis utilities (used in plotting.py)
+pandas>=1.5
+seaborn>=0.12
+
+# Optional for notebooks and interactive exploration
+# jupyter>=1.0
+
