@@ -133,9 +133,14 @@ To regenerate the full simulation dataset:
 
 ## Model
 
-**Standard Vicsek model.** At each time step, particles align their heading with the mean heading of all neighbors within interaction radius *r*, subject to angular noise *η*.
+**Standard Vicsek model.** Particles move at constant speed in a 2D periodic domain. At each time step, particle *i* aligns its heading with the mean heading of all neighbors within radius *r*, plus Gaussian noise *η*.
 
-**Minority-interaction variant.** The same rule applies, unless a neighbor exists whose orientation deviates from the local mean by more than *ε* and whose fraction among local neighbors is below *γ*. In that case the particle aligns with this dissenting minority neighbor instead. Small *ε* and *γ* values make the minority rule easy to trigger, pushing the system toward a self-organized critical state with scale-free avalanches and heightened collective responsiveness.
+**Minority-interaction variant.** The same alignment rule applies by default. However, if two conditions are simultaneously satisfied, particle *i* instead aligns with its most strongly deviating neighbor — the "defector," defined as the neighbor whose orientation has the smallest dot product with the local mean velocity:
+
+1. **Local order condition:** the dot product of the local mean velocity and particle *i*'s own heading exceeds *ε*. This ensures the minority rule only fires when the neighborhood is already well-aligned — there must be a clear majority to deviate from.
+2. **Defector condition:** the dot product of the local mean velocity and the defector's heading falls below *γ*. This ensures the defector is genuinely anti-aligned, not merely slightly off.
+
+When both conditions hold, particle *i* adopts the defector's heading (plus noise) rather than the majority direction. Higher *ε* or lower (more negative) *γ* make the rule harder to trigger. Across a broad intermediate range of both parameters, the competition between majority alignment and minority defection drives the system to a self-organized critical state with scale-free avalanches and heightened collective responsiveness.
 
 ## Citation
 
