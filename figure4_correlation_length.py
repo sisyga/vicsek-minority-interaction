@@ -362,7 +362,7 @@ def create_figure4():
 
         # Plot VM correlation lengths with grey dotted line and round markers
         ax2.plot(vm_sizes_arr, vm_lengths_arr, 'o', c='grey',
-                 label='Vicsek Model')
+                 label='Vicsek model')
 
         # Linear fit for VM correlation length vs. system size
         if len(vm_sizes_arr) > 1:
@@ -380,8 +380,8 @@ def create_figure4():
         print("No Vicsek correlation lengths calculated")
 
     # Set up correlation length plot
-    ax2.set_xlabel(r'System Size $L$')
-    ax2.set_ylabel('Correlation Length $d_0$')
+    ax2.set_xlabel(r'System size $L$')
+    ax2.set_ylabel('Correlation length $d_0$')
 
     # Add legend if we have data
     if soc_correlation_lengths or vm_correlation_lengths:

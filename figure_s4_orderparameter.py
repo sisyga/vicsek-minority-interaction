@@ -258,7 +258,7 @@ def plot_panels(groups):
             location='top',
             pad=0.02,
         )
-        cbarB.set_label(r'Variance Ratio')
+        cbarB.set_label(r'Variance ratio')
 
     # constrained_layout already active; avoid tight_layout to prevent overlap
 

@@ -329,7 +329,7 @@ def create_figure3():
 
     # Plot c) Avalanche size with varying system size
     ax_c = axes[1, 0]
-    ax_c.set_xlabel('Avalanche Size')
+    ax_c.set_xlabel('Avalanche size')
     ax_c.set_ylabel(fr'$P(X\geq x)$')
     ax_c.set_yscale('log')  # Log scale on y-axis only (matching plot a)
     ax_c.set_xscale('log')  # Log scale on x-axis (matching plot a)
@@ -337,7 +337,7 @@ def create_figure3():
 
     # Plot d) Avalanche duration with varying system size
     ax_d = axes[1, 1]
-    ax_d.set_xlabel('Avalanche Duration')
+    ax_d.set_xlabel('Avalanche duration')
     # ax_d.set_ylabel('P(Duration ≥ t)')
     ax_d.set_yscale('log')
     ax_d.set_xscale('log')  # Log-log scale (matching plot b)
@@ -444,9 +444,9 @@ def create_figure3():
     # Add Vicsek reference model to plots a & b if available
     if vicsek_ref_sizes is not None and len(vicsek_ref_sizes) > 0:
         # Plot Vicsek model reference with dashed grey line
-        plot_ccdf(vicsek_ref_sizes, ax_a, label="Vicsek Model", color='grey',
+        plot_ccdf(vicsek_ref_sizes, ax_a, label="Vicsek model", color='grey',
                   linestyle='--', marker='o')
-        plot_ccdf(vicsek_ref_durations, ax_b, label="Vicsek Model", color='grey',
+        plot_ccdf(vicsek_ref_durations, ax_b, label="Vicsek model", color='grey',
                   linestyle='--', marker='o')
 
     # Plot varying system sizes (plots c & d)

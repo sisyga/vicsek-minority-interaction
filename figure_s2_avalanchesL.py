@@ -223,20 +223,20 @@ def main():
             pass
 
         if vm_sizes is not None and len(vm_sizes) > 0:
-            plot_ccdf(vm_sizes, ax_size, label='Vicsek Model', color='grey', linestyle='--')
+            plot_ccdf(vm_sizes, ax_size, label='Vicsek model', color='grey', linestyle='--')
         if vm_integrated is not None and len(vm_integrated) > 0:
-            plot_ccdf(vm_integrated, ax_int, label='Vicsek Model', color='grey', linestyle='--')
+            plot_ccdf(vm_integrated, ax_int, label='Vicsek model', color='grey', linestyle='--')
         if vm_durs is not None and len(vm_durs) > 0:
-            plot_ccdf(vm_durs, ax_dur, label='Vicsek Model', color='grey', linestyle='--')
+            plot_ccdf(vm_durs, ax_dur, label='Vicsek model', color='grey', linestyle='--')
 
         # Legend only on the top-left panel to avoid clutter (include VM entry on first row)
         if row == 0:
             ax_dur.legend(loc='lower right', frameon=True)
 
     # Bottom x-labels (place on last row)
-    axes[-1, 0].set_xlabel('Avalanche Size')
-    axes[-1, 1].set_xlabel('Integrated Excursion')
-    axes[-1, 2].set_xlabel('Avalanche Duration')
+    axes[-1, 0].set_xlabel('Avalanche size')
+    axes[-1, 1].set_xlabel('Integrated excursion')
+    axes[-1, 2].set_xlabel('Avalanche duration')
 
     # Labels (a–l)
     label_axes(fig, labels=['(a)', '(b)', '(c)',

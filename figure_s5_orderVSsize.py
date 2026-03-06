@@ -233,7 +233,7 @@ def plot_panels():
             # Vicsek baseline
             vm_Ls, vm_means, vm_sems = gather_vm_stats_for_key(rho, eta)
             if vm_Ls and vm_means:
-                ax.errorbar(vm_Ls, vm_means, yerr=vm_sems, label='Vicsek Model',
+                ax.errorbar(vm_Ls, vm_means, yerr=vm_sems, label='Vicsek model',
                             color='grey', marker='s', linestyle='--')
                 if len(vm_sems) > 0:
                     arr = np.asarray(vm_sems, dtype=float)

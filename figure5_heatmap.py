@@ -213,7 +213,7 @@ def main():
                         origin='lower', extent=extent)
     axs[1].set_xlabel(r'$\gamma$')
     axs[1].set_ylabel('')
-    fig.colorbar(im2, ax=axs[1], label=r'Variance Ratio', orientation='horizontal',
+    fig.colorbar(im2, ax=axs[1], label=r'Variance ratio', orientation='horizontal',
                          location='top')
 
     # Mark specified points on both subplots using crosses with specific tab10 colors: indices 0, 2, and 3.

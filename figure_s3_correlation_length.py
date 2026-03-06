@@ -198,7 +198,7 @@ def main():
         if vm_corr_lengths:
             vm_sizes_arr = np.array([cl[0] for cl in vm_corr_lengths])
             vm_lengths_arr = np.array([cl[1] for cl in vm_corr_lengths])
-            axB.plot(vm_sizes_arr, vm_lengths_arr, 'o', c='grey', label='Vicsek Model')
+            axB.plot(vm_sizes_arr, vm_lengths_arr, 'o', c='grey', label='Vicsek model')
             if len(vm_sizes_arr) > 1:
                 try:
                     vm_popt, _ = curve_fit(lambda x, m, c: m * x + c, vm_sizes_arr, vm_lengths_arr)
@@ -207,8 +207,8 @@ def main():
                 except Exception:
                     pass
 
-        axB.set_xlabel(r'System Size $L$')
-        axB.set_ylabel('Correlation Length $d_0$')
+        axB.set_xlabel(r'System size $L$')
+        axB.set_ylabel('Correlation length $d_0$')
         axB.set_title(fr'$\epsilon={eps}, \gamma={gam}$')
 
     # Clean up empty panels if combos < nrows*ncols

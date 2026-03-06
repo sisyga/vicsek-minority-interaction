@@ -146,7 +146,7 @@ def main():
     
     # Panel a: Order parameters
     ax1.plot(time, soc_order_params, label=r'Minority interaction', color=soc_color)
-    ax1.plot(time, vicsek_order_params, label=r'Vicsek Model', color='grey')
+    ax1.plot(time, vicsek_order_params, label=r'Vicsek model', color='grey')
     
     # Threshold for avalanche detection - only show after equilibrium time
     threshold = np.mean(vicsek_order_params[equilibrium_time:]) - 3 * np.std(vicsek_order_params[equilibrium_time:])
@@ -163,7 +163,7 @@ def main():
 
     # Panel b: Cosine of average angle
     ax2.plot(time, np.cos(soc_avg_angles), label=r'Minority interaction', color=soc_color)
-    ax2.plot(time, np.cos(vicsek_avg_angles), label=r'Vicsek Model', color='grey')
+    ax2.plot(time, np.cos(vicsek_avg_angles), label=r'Vicsek model', color='grey')
     
     # Add '(b)' label to upper left corner
     ax2.text(*axis_label_position, '(b)', transform=ax2.transAxes)
